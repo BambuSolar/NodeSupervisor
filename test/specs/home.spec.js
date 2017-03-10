@@ -1,18 +1,36 @@
 var expect = require('chai').expect;
-var FormPage = require('../pageobjects/form.page');
+var HomePage = require('../pageobjects/home.page');
 
-describe('Subtitle Check', function () {
-    it('should deny access with wrong creds', function () {
-        FormPage.open();
+describe('Testing HomePage', function () {
 
-        expect(FormPage.subtitle.getText()).to.contain('Ingeniería Renovable en Mendoza, Argentina');
+    it('Subtitle Check', function () {
+        
+        HomePage.open();
+        
+        HomePage.preloader.waitForVisible(6000, true);
+
+        HomePage.subtitle.waitForVisible(6000);
+        
+        expect(HomePage.subtitle.getText()).to.contain('Ingeniería Renovable en Mendoza, Argentina');
+
     });
 
     it('Gratitude Check', function () {
-        FormPage.open();
+        
+        HomePage.open();
 
-        expect(FormPage.flash.getText()).to.contain('¡Gracias por visitarnos! Somos una empresa mendocina dedicada a las energías renovables. Desde\
-              el 2014 trabajamos cada día para que nuestra provincia sea más verde. Nuestro objetivo es ofrecer\
-              soluciones personalizadas económicas y sustentables.');
+        HomePage.preloader.waitForVisible(6000, true);
+
+        HomePage.gratitude.waitForExist(20 * 1000);
+
+        HomePage.gratitude.scroll(0,0);
+
+        browser.screenshot();
+
+        console.log(HomePage.gratitude.getText());
+
+        expect(HomePage.gratitude.getText()).to.contain('¡Gracias por visitarnos! Somos una empresa mendocina dedicada a las energías renovables. Desde el 2014 trabajamos cada día para que nuestra provincia sea más verde. Nuestro objetivo es ofrecer soluciones personalizadas económicas y sustentables.');
+
     });
+
 });

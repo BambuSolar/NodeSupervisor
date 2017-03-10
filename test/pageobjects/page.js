@@ -11,6 +11,7 @@ Page.prototype.open = function (path) {
 	var environment = 'beta';
 
     browser.url(url[environment] + path)
+    	.windowHandleMaximize();
 }
 
 module.exports = new Page()

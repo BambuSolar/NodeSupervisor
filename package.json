@@ -1,7 +1,7 @@
 {
-  "name": "selenium-webdriverio-mocha-chai-sinon-boilerplate",
-  "version": "1.0.1",
-  "description": "Selenium Tests",
+  "name": "NodeSupervisor",
+  "version": "0.0.1",
+  "description": "Validar los deploy de Bambu Energía en Movimiento",
   "main": "test.js",
   "directories": {
     "test": "test"
