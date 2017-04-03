@@ -4,12 +4,6 @@ var HomePage = require('../pageobjects/home.page');
 describe('Testing HomePage', function () {
 
     it('Subtitle Check', function () {
-    
-        expect("Hola").to.contain("Chau");
-        
-    });
-
-    it('Subtitle Check', function () {
         
         HomePage.open();
         
