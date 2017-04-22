@@ -5,7 +5,7 @@ var homePage = Object.create(page, {
      * define elements
      */
     preloader: { get: function () { return browser.element('.preloader') }},
-    gratitude: { get: function () { return browser.element('#products > div > div:nth-child(2) > div > div.head_title.text-center > h3'); } },
+    gratitude: { get: function () { return browser.element('#who_we_are > div > div > div > h3'); } },
     subtitle:  { get: function () { return browser.element('#home > div > div > h4'); } },
 
     /**
