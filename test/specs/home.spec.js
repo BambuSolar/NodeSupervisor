@@ -6,8 +6,6 @@ describe('Testing HomePage', function () {
     it('Subtitle Check', function () {
         
         HomePage.open();
-        
-        HomePage.preloader.waitForVisible(6000, true);
 
         HomePage.subtitle.waitForVisible(6000);
         
@@ -18,8 +16,6 @@ describe('Testing HomePage', function () {
     it('Gratitude Check', function () {
         
         HomePage.open();
-
-        HomePage.preloader.waitForVisible(6000, true);
 
         HomePage.gratitude.waitForExist(20 * 1000);
 
