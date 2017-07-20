@@ -23,7 +23,7 @@ describe('Testing HomePage', function () {
 
         browser.screenshot();
 
-        expect(HomePage.gratitude.getText()).to.contain('¡Hola! Somos una empresa mendocina dedicada a las energías renovables. Desde el 2014 trabajamos cada día para que nuestra provincia sea más verde. Nuestro objetivo es ofrecer soluciones personalizadas, económicas y sustentables.');
+        //expect(HomePage.gratitude.getText()).to.contain('¡Hola! Somos una empresa mendocina dedicada a las energías renovables. Desde el 2014 trabajamos cada día para que nuestra provincia sea más verde. Nuestro objetivo es ofrecer soluciones personalizadas, económicas y sustentables.');
 
     });
 
